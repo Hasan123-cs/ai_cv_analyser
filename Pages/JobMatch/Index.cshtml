@@ -34,7 +34,7 @@
 
             <h3>Job Input</h3>
 
-            <form method="post">
+            <form method="post" id="jobMatchForm">
                 <input type="hidden" asp-for="CVId" />
 
                 <label>Job Title</label>
@@ -44,7 +44,9 @@
                 <textarea asp-for="JobDescription" rows="10" class="form-control"
                           placeholder="Paste job description..."></textarea>
 
-                <button type="submit" class="ai-btn mt-3">
+                <button type="submit"
+                        id="analyzeBtn"
+                        class="ai-btn mt-3">
                     Analyze Match 🚀
                 </button>
             </form>

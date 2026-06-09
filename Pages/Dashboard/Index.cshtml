@@ -138,6 +138,7 @@
 
                         <div class="cv-actions">
                             <a asp-page="/Analysis/Index"
+                             class="analyze-link"
                                asp-route-cvId="@cv.Id">
                                 Analyze
                             </a>
@@ -179,4 +180,22 @@
         </div>
 
     </div>
+<div id="loadingOverlay">
+    <div class="text-center text-white">
+        <div class="spinner-border"></div>
+        <h4 class="mt-3">Analyzing CV...</h4>
+    </div>
+</div>
+<script>
+    document.querySelectorAll(".analyze-link")
+        .forEach(link => {
 
+            link.addEventListener("click", function () {
+
+                document.getElementById("loadingOverlay")
+                    .style.display = "flex";
+
+            });
+
+        });
+</script>

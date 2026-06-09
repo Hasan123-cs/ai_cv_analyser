@@ -1,0 +1,83 @@
+﻿@page
+@model Ai_Cv_Analyser.Pages.Account.LoginModel
+@{
+    Layout = null;
+}
+<style>
+    body {
+        background-image: url('/images/loginPage.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+
+        <div class="col-md-5">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-body p-5">
+
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">
+                            Smart Resume Platform
+                        </h2>
+
+                        <p class="text-muted">
+                            Login to continue
+                        </p>
+                    </div>
+
+                    <form method="post">
+
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Email
+                            </label>
+
+                            <input asp-for="Input.Email"
+                                   class="form-control"
+                                   placeholder="example@email.com" required />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Password
+                            </label>
+
+                            <input asp-for="Input.Password"
+                                   type="password"
+                                   class="form-control"
+                                   placeholder="Password" required />
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+                            Login
+                        </button>
+
+                        <span asp-validation-for="Input.Password"  class="mb-4 text-danger"></span>
+                    </form>
+
+                    <hr />
+
+                    <div class="text-center">
+
+                        <a asp-page="/Account/Register">
+                            Create New Account
+                        </a>
+
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

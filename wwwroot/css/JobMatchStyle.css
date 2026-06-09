@@ -1,0 +1,139 @@
+﻿body {
+    background: radial-gradient(circle at top left,#dbeafe,#f8fafc);
+    min-height: 100vh;
+    font-family: Segoe UI, sans-serif;
+}
+
+/* PAGE */
+.page {
+    padding: 30px;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg,#0f172a,#2563eb);
+    color: white;
+    border-radius: 25px;
+    padding: 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        opacity: .85;
+    }
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* PANEL */
+.panel {
+    background: rgba(255,255,255,.7);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.4);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* INPUT */
+.form-control {
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    resize: none;
+}
+
+/* BUTTON */
+.ai-btn {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 15px;
+    background: linear-gradient(135deg,#2563eb,#1d4ed8);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .ai-btn:hover {
+        transform: scale(1.02);
+    }
+
+/* SCORE CIRCLE */
+.score {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: bold;
+    color: #2563eb;
+    background: white;
+    border: 12px solid #2563eb;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* SKILLS */
+.skill {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 4px;
+    font-size: 13px;
+}
+
+.missing {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 4px;
+    font-size: 13px;
+}
+
+/* BOX */
+.rec-box {
+    background: #eff6ff;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* ROADMAP */
+.roadmap-step {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}

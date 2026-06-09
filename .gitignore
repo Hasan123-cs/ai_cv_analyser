@@ -1,0 +1,51 @@
+﻿# =====================
+# Build output
+# =====================
+bin/
+obj/
+out/
+publish/
+
+# =====================
+# Visual Studio 
+# =====================
+.vs/
+.vscode/
+*.user
+*.suo
+
+# =====================
+# Logs
+# =====================
+*.log
+
+# =====================
+# ASP.NET Core config
+# =====================
+appsettings.Development.json
+
+appsettings.Local.json
+
+# =====================
+# PostgreSQL / DB related
+# =====================
+
+*.sql
+*.dump
+*.backup
+
+secrets.json
+
+Migrations/*Snapshot.cs
+
+# =====================
+# Docker
+# =====================
+*.env
+docker-compose.override.yml
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db

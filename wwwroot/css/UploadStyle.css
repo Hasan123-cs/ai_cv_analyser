@@ -1,0 +1,118 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI,sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #dbeafe, #f8fafc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-page {
+    width: 100%;
+    padding: 20px;
+}
+
+.upload-card {
+    max-width: 650px;
+    margin: auto;
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.upload-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-icon {
+    width: 90px;
+    height: 90px;
+    margin: auto auto 20px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.upload-header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.upload-header p {
+    color: #6b7280;
+}
+
+/* Upload Area */
+
+.upload-area {
+    width: 100%;
+    min-height: 250px;
+    border: 3px dashed #2563eb;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    background: #eff6ff;
+    margin-bottom: 25px;
+}
+
+    .upload-area:hover {
+        background: #dbeafe;
+        transform: translateY(-3px);
+    }
+
+    .upload-area i {
+        font-size: 65px;
+        color: #2563eb;
+        margin-bottom: 15px;
+    }
+
+    .upload-area h4 {
+        color: #111827;
+        margin-bottom: 8px;
+    }
+
+    .upload-area span {
+        color: #6b7280;
+    }
+
+.hidden-input {
+    display: none;
+}
+
+/* Button */
+
+.upload-btn {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 16px;
+    background: #2563eb;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+    .upload-btn:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+    }

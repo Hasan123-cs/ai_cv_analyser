@@ -38,10 +38,10 @@
                 <input type="hidden" asp-for="CVId" />
 
                 <label>Job Title</label>
-                <input asp-for="JobTitle" class="form-control" placeholder="e.g. .NET Developer" />
+                <input asp-for="JobTitle" class="form-control" required placeholder="e.g. .NET Developer" />
 
                 <label style="margin-top:10px;">Job Description</label>
-                <textarea asp-for="JobDescription" rows="10" class="form-control"
+                <textarea asp-for="JobDescription" required rows="10" class="form-control"
                           placeholder="Paste job description..."></textarea>
 
                 <button type="submit"

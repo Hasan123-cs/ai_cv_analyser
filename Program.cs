@@ -45,9 +45,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 // Services
-builder.Services.AddScoped<IPdfService, PdfService>();
-builder.Services.AddScoped<IJobMatchService, JobMatchService>();
-builder.Services.AddScoped<IFileStorageService, FileStorageService>();
+
 builder.Services.AddScoped<UserOperation>();
 builder.Services.AddScoped<LoginOperation>();
 builder.Services.AddScoped<DashboardOperation>();

@@ -26,13 +26,18 @@ namespace Ai_Cv_Analyser.Pages.Upload
         }
         public async Task<IActionResult> OnPostAsync()
         {
-            if(!ModelState.IsValid)
+            
+            var user = await _user.GetUserAsync(User);
+            if (CvFile == null ||
+            Path.GetExtension(CvFile.FileName).ToLower() != ".pdf")
             {
-               
+                ModelState.AddModelError("", "Must be a PDF file");
+            }
+            if (!ModelState.IsValid)
+            {
+
                 return Page();
             }
-            var user = await _user.GetUserAsync(User);
-
             await op.UploadCvFile(CvFile, user);
             return RedirectToPage("/Dashboard/Index");
         }

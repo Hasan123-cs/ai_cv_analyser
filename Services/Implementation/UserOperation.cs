@@ -33,7 +33,7 @@ namespace Ai_Cv_Analyser.Services.Implementation
             {
                 return [];
             }
-            return  result.Errors.Select(x=>x.Description).ToList();
+            return  result.Errors.Where(r=>r.Code!= "DuplicateUserName").Select(x=>x.Description).ToList();
 
         }
     }

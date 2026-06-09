@@ -4,107 +4,110 @@
     Layout = null;
 }
 
-<style>
-    body{
-        background-image:url('/images/register.png');
-        background-size:cover;
-        background-repeat:no-repeat;
-    }
-</style>
-<link rel="icon" href="/images/cvcv.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-@if(!ModelState.IsValid)
-{
-    <div asp-validation-summary="All" class="text-danger"></div>
-}
-<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="icon" href="/images/cvcv.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-<div class="container py-5">
+    <link href="/css//RegisterStyle.css" rel="stylesheet" />
 
-    <div class="row justify-content-center">
+    <div class="container py-5">
 
-        <div class="col-md-6">
+        <div class="row justify-content-center">
 
-            <div class="card shadow-lg border-0 rounded-3 ">
+            <div class="col-12 col-sm-10 col-md-6">
 
-                <div class="card-body p-5">
+                <div class="card shadow-lg border-0 rounded-3">
 
-                    <div class="text-center mb-4">
+                    <div class="card-body p-5">
 
-                        <h2 class="fw-bold">
-                            Create Account
-                        </h2>
+                        <div class="text-center mb-4">
 
-                        <p class="text-muted">
-                            Start analyzing your resume with AI
-                        </p>
+                            <h2 class="fw-bold">
+                                Create Account
+                            </h2>
 
-                    </div>
-
-                    <form method="post">
-
-                        <div class="mb-3">
-
-                            <label class="form-label">
-                                Full Name
-                            </label>
-
-                            <input asp-for="Input.FullName"
-                                   class="form-control" />
+                            <p class="text-muted">
+                                Start analyzing your resume with AI
+                            </p>
 
                         </div>
 
-                        <div class="mb-3">
+                        <form method="post">
 
-                            <label class="form-label">
-                                Email
-                            </label>
+                            <div class="mb-3">
 
-                            <input asp-for="Input.Email"
-                                   class="form-control" />
+                                <label class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input asp-for="Input.FullName"
+                                       class="form-control"
+                                       required />
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Email
+                                </label>
+
+                                <input asp-for="Input.Email"
+                                       class="form-control" />
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Password
+                                </label>
+
+                                <input asp-for="Input.Password"
+                                       type="password"
+                                       class="form-control"
+                                       required />
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label">
+                                    Confirm Password
+                                </label>
+
+                                <input asp-for="Input.ConfirmPassword"
+                                       type="password"
+                                       class="form-control"
+                                       required />
+
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-primary w-100">
+
+                                Register
+
+                            </button>
+
+                        </form>
+
+                        <hr />
+
+                        @if (!ModelState.IsValid)
+                        {
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                        }
+
+                        <div class="text-center">
+
+                            <a asp-page="/Account/Login">
+                                Already have an account?
+                            </a>
 
                         </div>
-
-                        <div class="mb-3">
-
-                            <label class="form-label">
-                                Password
-                            </label>
-
-                            <input asp-for="Input.Password"
-                                   type="password"
-                                   class="form-control" />
-
-                        </div>
-
-                        <div class="mb-4">
-
-                            <label class="form-label">
-                                Confirm Password
-                            </label>
-
-                            <input asp-for="Input.ConfirmPassword"
-                                   type="password"
-                                   class="form-control" />
-
-                        </div>
-
-                        <button type="submit"
-                                class="btn btn-success w-100">
-
-                            Register
-
-                        </button>
-
-                    </form>
-
-                    <hr />
-
-                    <div class="text-center">
-
-                        <a asp-page="/Account/Login">
-                            Already have an account?
-                        </a>
 
                     </div>
 
@@ -116,4 +119,3 @@
 
     </div>
 
-</div>

@@ -1,0 +1,30 @@
+﻿body {
+    background-image: url('/images/register.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+@@media (max-width: 768px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .card-body {
+        padding: 25px !important;
+    }
+}
+
+@@media (max-width: 576px) {
+
+    .card-body {
+        padding: 20px !important;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}

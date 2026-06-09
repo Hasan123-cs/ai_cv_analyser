@@ -26,7 +26,7 @@ namespace Ai_Cv_Analyser.Pages.Account
             }
             ModelState.AddModelError(
                     "Input.Password",
-                "Invalid Login Email Or Password Inncorrect");
+                "Invalid Login - Email Or Password Inncorrect");
 
             return Page();
         }

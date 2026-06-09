@@ -3,75 +3,85 @@
 @{
     Layout = null;
 }
-<style>
-    body {
-        background-image: url('/images/loginpage.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-</style>
-<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="icon" href="/images/cvcv.png" />
-<div class="container py-5">
-    <div class="row justify-content-center">
 
-        <div class="col-md-5">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <div class="card shadow-lg border-0">
+    <title>Login</title>
 
-                <div class="card-body p-5">
+    <link rel="icon" href="/images/cvcv.png" />
+<link rel="stylesheet" href="/css/LoginStyle.css" />
 
-                    <div class="text-center mb-4">
-                        <h2 class="fw-bold">
-                            Smart Resume Platform
-                        </h2>
 
-                        <p class="text-muted">
-                            Login to continue
-                        </p>
-                    </div>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-                    <form method="post">
 
-                        <div class="mb-3">
-                            <label class="form-label">
-                                Email
-                            </label>
 
-                            <input asp-for="Input.Email"
-                                   class="form-control"
-                                   placeholder="example@email.com" required />
-                        </div>
 
-                        <div class="mb-4">
-                            <label class="form-label">
-                                Password
-                            </label>
+    <div class="page-container">
 
-                            <input asp-for="Input.Password"
-                                   type="password"
-                                   class="form-control"
-                                   placeholder="Password" required />
-                        </div>
+        <div class="card login-card">
 
-                        <button type="submit"
-                                class="btn btn-primary w-100">
-                            Login
-                        </button>
+            <div class="card-body">
 
-                        <span asp-validation-for="Input.Password"  class="mb-4 text-danger"></span>
-                    </form>
+                <div class="text-center mb-4">
 
-                    <hr />
+                    <h2 class="fw-bold">
+                        Smart Resume Platform
+                    </h2>
 
-                    <div class="text-center">
+                    <p class="text-muted">
+                        Login to continue
+                    </p>
 
-                        <a asp-page="/Account/Register">
-                            Create New Account
-                        </a>
+                </div>
+
+                <form method="post">
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Email
+                        </label>
+
+                        <input asp-for="Input.Email"
+                               class="form-control"
+                               placeholder="example@email.com"
+                               required />
 
                     </div>
-                    
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Password
+                        </label>
+
+                        <input asp-for="Input.Password"
+                               type="password"
+                               class="form-control"
+                               placeholder="Password"
+                               required />
+
+                        <span asp-validation-for="Input.Password"
+                              class="text-danger"></span>
+
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-primary w-100">
+                        Login
+                    </button>
+
+                </form>
+
+                <hr />
+
+                <div class="text-center">
+
+                    <a asp-page="/Account/Register">
+                        Create New Account
+                    </a>
 
                 </div>
 
@@ -80,4 +90,6 @@
         </div>
 
     </div>
-</div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+

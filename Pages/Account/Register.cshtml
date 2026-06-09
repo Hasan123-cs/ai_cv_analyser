@@ -3,6 +3,7 @@
 @{
     Layout = null;
 }
+
 <style>
     body{
         background-image:url('/images/register.png');
@@ -10,6 +11,8 @@
         background-repeat:no-repeat;
     }
 </style>
+<link rel="icon" href="/images/cvcv.png" />
+
 @if(!ModelState.IsValid)
 {
     <div asp-validation-summary="All" class="text-danger"></div>

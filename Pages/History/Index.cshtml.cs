@@ -1,11 +1,13 @@
 using Ai_Cv_Analyser.Model;
 using Ai_Cv_Analyser.Services.Implementation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Ai_Cv_Analyser.Pages.History
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         public HistoryOperation h;

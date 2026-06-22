@@ -43,7 +43,8 @@
                 <label class="upload-area">
 
                     <input asp-for="CvFile"
-                           class="hidden-input" />
+                           class="hidden-input"
+                       id="cvInput"      />
 
                     <i class="ti ti-cloud-upload"></i>
 
@@ -55,6 +56,9 @@
 
                 </label>
 
+                <span id="fileStatus" class="text-muted mt-2 d-block" style="margin-bottom:3vh !important">
+                    No file selected
+                    </span>
                 <button type="submit"
                         class="upload-btn">
 
@@ -63,13 +67,41 @@
 
                 </button>
 
-                <div asp-validation-summary="All"
-                     class="text-danger mt-3">
-                </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger mt-3" id="validationBox"></div>
 
             </form>
 
         </div>
 
     </div>
+<script>
+    const input = document.getElementById("cvInput");
+    const status = document.getElementById("fileStatus");
+    const validationBox = document.getElementById("validationBox");
+    input.addEventListener("change", function () {
 
+        if (input.files.length === 0) {
+            status.textContent = "No file selected";
+            status.className = "text-muted d-block";
+            return;
+        }
+
+        const file = input.files[0];
+        const fileName = file.name.toLowerCase();
+        // here we check if not a valid pdf 
+        if (!fileName.endsWith(".pdf")) {
+            status.textContent = "❌ Only PDF files are allowed!";
+            status.className = "text-danger d-block";
+
+            input.value = "";
+            return;
+        }
+
+        status.textContent = "✅ CV selected: " + file.name;
+        status.className = "text-success d-block";
+        // to hide the server side validation after getting a valid pdf cv 
+        if (validationBox) {
+            validationBox.style.display = "none";
+        }
+    });
+</script>

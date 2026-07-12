@@ -23,7 +23,7 @@ namespace Ai_Cv_Analyser.Services.Implementation
            Input.Password,
            false,
            false);
-
+    // first false for remember me and the second for the lockout
             if (result.Succeeded)
             {
                 return 1;

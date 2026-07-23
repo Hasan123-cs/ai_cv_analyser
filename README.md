@@ -41,7 +41,7 @@ The project follows a clean and maintainable architecture based on ASP.NET Core 
 
 
 AI CV Analyzer
-
+```bash
 ├── Presentation Layer
 │ └── ASP.NET Core Razor Pages / MVC
 │
@@ -50,7 +50,7 @@ AI CV Analyzer
 │
 ├── Data Access Layer
 │ └── Entity Framework Core
-
+```
 
 ---
 
@@ -115,31 +115,18 @@ Make sure you have:
 
 # 🧩 Local Development Setup
 
-## Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/AI-CV-Analyzer.git
 
-cd AI-CV-Analyzer```
-
----
+cd AI-CV-Analyzer
 
 
-```bash
 
 dotnet ef database update
 dotnet run
 ```
----
-# 🔒 Security Implementation
 
-The project applies:
-
-ASP.NET Core Identity authentication
-Password hashing
-Authorization policies
-Input validation
-Secure database access
 
 ---
 # 👨‍💻 Author

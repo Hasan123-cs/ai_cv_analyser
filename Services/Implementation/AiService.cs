@@ -157,6 +157,8 @@ namespace Ai_Cv_Analyser.Services
             var request = new
             {
                 model = "deepseek/deepseek-chat-v3-0324",
+                max_tokens = 1000,
+                temperature = 0,
                 messages = new[]
                 {
             new

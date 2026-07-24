@@ -20,9 +20,10 @@ namespace Ai_Cv_Analyser.Services
         }
         public async Task<AnalysisResultDto> AnalyzeCVAsync(string cvText, CV cv)
         {
+            Console.WriteLine($"CV Length: {cvText.Length}");
             // get the key 
             var apiKey = Environment.GetEnvironmentVariable("OPENROUTER_API_KEY");
-            Console.WriteLine(apiKey);
+            Console.WriteLine(apiKey?.Substring(0, 15));
             // prepare the prompt 
             var prompt = $@"
                 Analyze this CV.
@@ -62,6 +63,9 @@ namespace Ai_Cv_Analyser.Services
             _httpClient.DefaultRequestHeaders.Authorization =
      new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", apiKey);
             // get response
+            Console.WriteLine("===== REQUEST =====");
+            Console.WriteLine(JsonSerializer.Serialize(request));
+            Console.WriteLine("===================");
             var response = await _httpClient.PostAsJsonAsync(
                 "https://openrouter.ai/api/v1/chat/completions",
                 request);

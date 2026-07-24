@@ -66,6 +66,9 @@ namespace Ai_Cv_Analyser.Services
                 "https://openrouter.ai/api/v1/chat/completions",
                 request);
             var result = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("===== RAW RESPONSE =====");
+            Console.WriteLine(result);
+            Console.WriteLine("========================");
             if (!response.IsSuccessStatusCode)
             {
                 throw new Exception(result);
@@ -80,7 +83,9 @@ namespace Ai_Cv_Analyser.Services
                 .GetString();
             Console.WriteLine(aiJson);
             aiJson = aiJson.Trim();
-
+            Console.WriteLine("===== AI CONTENT =====");
+            Console.WriteLine(aiJson);
+            Console.WriteLine("======================");
             int start = aiJson.IndexOf('{');
             int end = aiJson.LastIndexOf('}');
 
@@ -167,6 +172,9 @@ namespace Ai_Cv_Analyser.Services
 
             var result = await response.Content.ReadAsStringAsync();
 
+            Console.WriteLine("===== RAW RESPONSE =====");
+            Console.WriteLine(result);
+            Console.WriteLine("========================");
             if (!response.IsSuccessStatusCode)
             {
                 throw new Exception(result);
@@ -184,6 +192,10 @@ namespace Ai_Cv_Analyser.Services
             Console.WriteLine(aiJson);
             
             aiJson = aiJson.Trim();
+            Console.WriteLine("===== AI CONTENT =====");
+            Console.WriteLine(aiJson);
+            Console.WriteLine("======================");
+
 
             int start = aiJson.IndexOf('{');
             int end = aiJson.LastIndexOf('}');
@@ -224,28 +236,3 @@ namespace Ai_Cv_Analyser.Services
         }
     }
 }
-// workflow 
-//CV Text
-// ↓
-//Prompt
-// ↓
-//Request
-// ↓
-//Send
-// ↓
-//Response
-// ↓
-//Extract JSON
-// ↓
-//Deserialize
-// ↓
-////AnalysisResultDto
-//AI Career Assistant
-
-//1. Upload CV
-//2. Paste Job Description
-//3. AI Match Analysis
-//4. Match Percentage
-//5. Missing Skills
-//6. Personalized Learning Roadmap
-//7. Application Recommendation
